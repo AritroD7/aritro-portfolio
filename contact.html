@@ -55,7 +55,12 @@
             to you as soon as possible.
           </p>
           
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/aritrodhar90@gmail.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" required placeholder="John Doe" />
@@ -70,11 +75,11 @@
               <label for="subject">Subject</label>
               <select id="subject" name="subject" required>
                 <option value="">Select a topic...</option>
-                <option value="collaboration">Collaboration Opportunity</option>
-                <option value="project">Project Discussion</option>
-                <option value="consultation">Consultation Request</option>
-                <option value="speaking">Speaking Engagement</option>
-                <option value="other">Other</option>
+                <option value="Collaboration Opportunity">Collaboration Opportunity</option>
+                <option value="Project Discussion">Project Discussion</option>
+                <option value="Consultation Request">Consultation Request</option>
+                <option value="Speaking Engagement">Speaking Engagement</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 

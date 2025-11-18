@@ -115,29 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Contact form handling
+// Contact form handling with FormSubmit
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+  // Form will submit directly to FormSubmit - no custom handling needed
+  // FormSubmit will handle the email delivery automatically
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      subject: document.getElementById('subject').value,
-      message: document.getElementById('message').value
-    };
-
-    // For now, just create a mailto link
-    const mailtoLink = `mailto:aritrodhar90@gmail.com?subject=${encodeURIComponent(formData.subject + ' - ' + formData.name)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-
-    window.location.href = mailtoLink;
-
-    // Show success message (you can customize this)
-    alert('Opening your email client... If it doesn\'t open automatically, please email me directly at aritrodhar90@gmail.com');
+    // Let the form submit naturally to FormSubmit
+    // Show a loading state while submitting
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (submitButton) {
+      const originalText = submitButton.innerHTML;
+      submitButton.innerHTML = '<span>Sending...</span>';
+      submitButton.disabled = true;
+      
+      // Note: FormSubmit will redirect to a thank you page or back to form
+      // The actual submission is handled by the form's action attribute
+    }
   });
 }
 

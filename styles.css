@@ -752,10 +752,86 @@ strong {
   border-radius: 0.5rem;
 }
 
+.chess-achievements-preview {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(79, 70, 229, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.chess-achievements-preview h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.chess-achievements-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chess-achievements-preview li {
+  padding: 0.5rem 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .chess-visual {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.chess-image-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.chess-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.chess-image-container:hover .chess-photo {
+  transform: scale(1.05);
+}
+
+.chess-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chess-overlay-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.overlay-icon {
+  font-size: 2rem;
+}
+
+.chess-overlay-text span:last-child {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .chess-board {
