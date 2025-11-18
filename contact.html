@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Aritro Dhar for opportunities, collaborations, or discussions about finance, education, marketing, or chess." />
+  <title>Contact | Aritro Dhar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Aritro Dhar</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="section-label">Let's Connect</div>
+        <h1 class="page-title">Get in Touch</h1>
+        <p class="page-subtitle">
+          I'm always open to discussing opportunities, collaborations, or sharing ideas around 
+          finance, education, marketing, or chess.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send Me a Message</h2>
+          <p class="form-description">
+            Have a question or want to work together? Fill out the form below and I'll get back 
+            to you as soon as possible.
+          </p>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="John Doe" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic...</option>
+                <option value="collaboration">Collaboration Opportunity</option>
+                <option value="project">Project Discussion</option>
+                <option value="consultation">Consultation Request</option>
+                <option value="speaking">Speaking Engagement</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required rows="6" placeholder="Tell me about your project or question..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <p>Prefer to reach out directly? Here are the best ways to connect with me.</p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h4>Email</h4>
+                  <a href="mailto:aritro.dhar.work@gmail.com">aritro.dhar.work@gmail.com</a>
+                  <p class="method-note">Best for detailed discussions</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h4>LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/aritro-dhar-036407324" target="_blank">Connect on LinkedIn</a>
+                  <p class="method-note">For professional networking</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h4>Location</h4>
+                  <p>Dhaka, Bangladesh</p>
+                  <p class="method-note">Open to remote opportunities</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="availability-card">
+            <h3>Availability</h3>
+            <div class="availability-items">
+              <div class="availability-item">
+                <div class="availability-icon">✓</div>
+                <div class="availability-text">
+                  <strong>Consulting Projects</strong>
+                  <p>Available for marketing, finance, or product strategy consultations</p>
+                </div>
+              </div>
+              <div class="availability-item">
+                <div class="availability-icon">✓</div>
+                <div class="availability-text">
+                  <strong>Collaborations</strong>
+                  <p>Open to partnerships on EdTech or FinTech initiatives</p>
+                </div>
+              </div>
+              <div class="availability-item">
+                <div class="availability-icon">✓</div>
+                <div class="availability-text">
+                  <strong>Speaking</strong>
+                  <p>Available for talks on financial literacy, chess, or entrepreneurship</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="response-time-card">
+            <h4>Response Time</h4>
+            <p>
+              I typically respond to messages within <strong>24-48 hours</strong>. For urgent 
+              inquiries, please mention "Urgent" in the subject line.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Common Questions</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Are you available for freelance work?</h3>
+          <p>
+            Yes, I'm open to select freelance opportunities in marketing strategy, product consulting, 
+            or content creation — particularly in finance, education, or business domains.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can you speak at events or workshops?</h3>
+          <p>
+            Absolutely! I'm available for speaking engagements on topics including financial literacy, 
+            entrepreneurship, chess strategy, or bridging the gap between business and technology.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you mentor students?</h3>
+          <p>
+            I offer informal mentorship to students interested in finance, product development, or 
+            navigating early career decisions. Reach out if you'd like to discuss.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is Finico accepting beta testers?</h3>
+          <p>
+            Not yet, but I'm building a waitlist! If you're interested in early access to Finico, 
+            mention it in your message and I'll add you to the list.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can we collaborate on a project?</h3>
+          <p>
+            I'm always interested in meaningful collaborations, especially in EdTech or FinTech. 
+            Share your idea and let's explore if there's a good fit.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you play online chess?</h3>
+          <p>
+            Yes! I'm active on Chess.com with a rapid rating above 2000. Feel free to send a challenge 
+            or reach out if you'd like to discuss chess strategy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof / Testimonials (Optional - can be added later) -->
+  <section class="section">
+    <div class="container">
+      <div class="final-cta">
+        <h2>Let's Build Something Great</h2>
+        <p>
+          Whether you have a specific project in mind, want to explore collaboration opportunities, 
+          or simply want to connect, I'd love to hear from you.
+        </p>
+        <div class="final-cta-buttons">
+          <a href="mailto:aritro.dhar.work@gmail.com" class="btn btn-primary">
+            Email Me Directly
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-main">
+          <h3>Aritro Dhar</h3>
+          <p>Marketing Coordinator & Founder exploring business, finance & tech.</p>
+          <div class="social-links">
+            <a href="mailto:aritro.dhar.work@gmail.com" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aritro-dhar-036407324" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Projects</h4>
+            <a href="projects.html#finico">Finico</a>
+            <a href="https://economics-business-finance.s3.us-east-1.amazonaws.com/Economics-Business-Finance/story.html" target="_blank">EdTech Game</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Aritro Dhar. Crafted with purpose and precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
