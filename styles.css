@@ -258,6 +258,27 @@ strong {
   z-index: -1;
 }
 
+.hero-decorative-image {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 60%;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-decorative-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -350,12 +371,19 @@ strong {
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: var(--spacing-md);
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.3);
+  border: 2px solid rgba(79, 70, 229, 0.2);
 }
 
 .profile-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.profile-card:hover .profile-image img {
+  transform: scale(1.05);
 }
 
 .profile-info {
@@ -550,6 +578,32 @@ strong {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
+}
+
+.projects-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-bg-image {
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 70%;
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
 }
 
 .project-card {
@@ -752,16 +806,51 @@ strong {
   margin-bottom: var(--spacing-3xl);
 }
 
+.about-bg-visual {
+  position: absolute;
+  right: -5%;
+  top: 20%;
+  width: 45%;
+  height: 50%;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-bg-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+}
+
 .about-intro-image {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: var(--shadow-xl);
+  border: 3px solid rgba(79, 70, 229, 0.2);
+  position: relative;
+}
+
+.about-intro-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .about-intro-image img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform var(--transition-slow);
+}
+
+.about-intro-image:hover img {
+  transform: scale(1.03);
 }
 
 .about-intro-content h2 {
@@ -850,6 +939,53 @@ strong {
   left: 0;
   color: var(--color-primary-light);
   font-weight: bold;
+}
+
+/* Chess Credentials in Timeline */
+.chess-credentials {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  flex-wrap: wrap;
+}
+
+.chess-id-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  border-radius: 0.75rem;
+  transition: all var(--transition-base);
+}
+
+.chess-id-card:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+  border-color: rgba(79, 70, 229, 0.5);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.chess-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chess-id-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.chess-id-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* Skills Grid */
@@ -1650,6 +1786,17 @@ strong {
 
   .subjects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-decorative-image,
+  .projects-bg-image,
+  .about-bg-visual {
+    display: none;
+  }
+
+  .chess-credentials {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
