@@ -130,14 +130,14 @@ if (contactForm) {
     };
 
     // For now, just create a mailto link
-    const mailtoLink = `mailto:aritro.dhar.work@gmail.com?subject=${encodeURIComponent(formData.subject + ' - ' + formData.name)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:aritrodhar90@gmail.com?subject=${encodeURIComponent(formData.subject + ' - ' + formData.name)}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
 
     window.location.href = mailtoLink;
 
     // Show success message (you can customize this)
-    alert('Opening your email client... If it doesn\'t open automatically, please email me directly at aritro.dhar.work@gmail.com');
+    alert('Opening your email client... If it doesn\'t open automatically, please email me directly at aritrodhar90@gmail.com');
   });
 }
 
@@ -290,4 +290,4 @@ function createScrollProgress() {
 // Console message for developers
 console.log('%c👋 Hello, developer!', 'font-size: 20px; font-weight: bold; color: #667eea;');
 console.log('%cThis portfolio was crafted with attention to detail and modern web standards.', 'font-size: 14px; color: #a8a8b3;');
-console.log('%cInterested in working together? Reach out at aritro.dhar.work@gmail.com', 'font-size: 14px; color: #4f46e5;');
+console.log('%cInterested in working together? Reach out at aritrodhar90@gmail.com', 'font-size: 14px; color: #4f46e5');

@@ -970,6 +970,120 @@ strong {
   margin-bottom: 0;
 }
 
+/* Education Section */
+.education-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-2xl);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.education-icon {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.education-details h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-details h4 {
+  font-size: 1.25rem;
+  color: var(--color-primary-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.education-status {
+  font-size: 0.9375rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
+
+.subjects-section {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.subjects-section h5 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.subjects-intro {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.7;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.subject-item {
+  padding: var(--spacing-lg);
+  background-color: rgba(79, 70, 229, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  transition: all var(--transition-base);
+}
+
+.subject-item:hover {
+  transform: translateY(-4px);
+  background-color: rgba(79, 70, 229, 0.1);
+  border-color: var(--border-color-light);
+  box-shadow: var(--shadow-md);
+}
+
+.subject-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.subject-item strong {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.subject-item p {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+.education-note {
+  padding: var(--spacing-lg);
+  background-color: rgba(79, 70, 229, 0.1);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
 /* Projects Page Specific */
 .project-detail {
   max-width: 900px;
@@ -1527,6 +1641,15 @@ strong {
 
   .timeline {
     padding-left: var(--spacing-lg);
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .subjects-grid {
+    grid-template-columns: 1fr;
   }
 }
 
