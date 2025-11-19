@@ -115,23 +115,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Contact form handling with FormSubmit
+// Contact form handling with EmailJS
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  // Form will submit directly to FormSubmit - no custom handling needed
-  // FormSubmit will handle the email delivery automatically
-  contactForm.addEventListener('submit', (e) => {
-    // Let the form submit naturally to FormSubmit
-    // Show a loading state while submitting
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
     const submitButton = contactForm.querySelector('button[type="submit"]');
-    if (submitButton) {
-      const originalText = submitButton.innerHTML;
-      submitButton.innerHTML = '<span>Sending...</span>';
-      submitButton.disabled = true;
-      
-      // Note: FormSubmit will redirect to a thank you page or back to form
-      // The actual submission is handled by the form's action attribute
+    const statusDiv = document.getElementById('form-status');
+    const originalButtonContent = submitButton.innerHTML;
+    
+    // Get form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value || 'No email provided',
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value
+    };
+    
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span>Sending...</span>';
+    
+    // Create mailto link as fallback/primary method
+    const mailtoLink = `mailto:dhararitro.work@gmail.com?subject=${encodeURIComponent(formData.subject + ' - From: ' + formData.name)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\n---\nSent from Portfolio Contact Form`
+    )}`;
+    
+    // Open mailto
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    if (statusDiv) {
+      statusDiv.innerHTML = '<p class=\"success-message\">✓ Opening your email client... If it doesn\'t open, please email directly at dhararitro.work@gmail.com</p>';
+      statusDiv.style.display = 'block';
     }
+    
+    // Reset form after delay
+    setTimeout(() => {
+      contactForm.reset();
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonContent;
+      if (statusDiv) {
+        statusDiv.style.display = 'none';
+      }
+    }, 3000);
   });
 }
 
@@ -284,4 +312,4 @@ function createScrollProgress() {
 // Console message for developers
 console.log('%c👋 Hello, developer!', 'font-size: 20px; font-weight: bold; color: #667eea;');
 console.log('%cThis portfolio was crafted with attention to detail and modern web standards.', 'font-size: 14px; color: #a8a8b3;');
-console.log('%cInterested in working together? Reach out at aritrodhar90@gmail.com', 'font-size: 14px; color: #4f46e5');
+console.log('%cInterested in working together? Reach out at dhararitro.work@gmail.com', 'font-size: 14px; color: #4f46e5');
