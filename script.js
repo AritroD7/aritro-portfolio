@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animateElements.forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    el.style.transition = `opacity 0.4s ease ${index * 0.08}s, transform 0.4s ease ${index * 0.08}s`;
     observer.observe(el);
   });
 });
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
     img.style.opacity = '0';
-    img.style.transition = 'opacity 0.5s ease';
+    img.style.transition = 'opacity 0.3s ease';
     
     if (img.complete) {
       img.style.opacity = '1';
